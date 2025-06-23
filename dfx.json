@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "rust-canister-calls-backend": {
+      "candid": "src/rust-canister-calls-backend/rust-canister-calls-backend.did",
+      "package": "rust-canister-calls-backend",
+      "type": "rust"
+    },
+    "rust-canister-calls-frontend": {
+      "dependencies": [
+        "rust-canister-calls-backend"
+      ],
+      "source": [
+        "src/rust-canister-calls-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "rust-canister-calls-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
